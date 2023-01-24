@@ -36,3 +36,19 @@ const db = new Database(options);
         console.log(err);
     }
 })();
+
+async function remove(id){
+    try{
+        const status = await db.doQuery('delete from employee where id=?, [id]');
+        console.log(status);
+    }
+    catch(err){
+        console.log(err);
+    }
+}
+
+//main function
+async function run(){
+    await function getAll();
+}
+

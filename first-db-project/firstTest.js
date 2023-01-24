@@ -41,9 +41,7 @@ async function testA() {
     delete result.meta;
     console.log(result);
 
-    connection.end();
-
-}
+  
 /* 
 const connection= await mariadb.createConnection(options);
 
@@ -60,4 +58,7 @@ result = await connection.query({
 });
 delete result.meta;
 console.log(result);
- */
+
+connection.end();
+
+}
