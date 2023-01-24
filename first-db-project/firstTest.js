@@ -16,11 +16,6 @@ async function testA() {
         /* allowPublicKeyRetrieval:true */ //if using mySQL
     };
 
-
-
-
-
-
     const connection = await mariadb.createConnection(options);
 
     console.log('######### test 1 ##########');
@@ -49,3 +44,20 @@ async function testA() {
     connection.end();
 
 }
+/* 
+const connection= await mariadb.createConnection(options);
+
+let result = await connection.query('select * from employee');
+// console.log(result);
+delete result.meta; //removing meta from result
+console.log(result);
+// console.log(Object.values(result[0]));
+// console.log(result.map(item=>Object.values(item)));
+
+console.log('######## test 2 ######');
+result = await connection.query({
+    rowsAsArray:true, sql:'select * from employee'
+});
+delete result.meta;
+console.log(result);
+ */
