@@ -1,8 +1,0 @@
-{
-    "port": 3001,
-    "host": "localhost",
-    "storage": {
-        "storageFolder": "storage",
-        "dataLayer": "dataStorageLayer.js"
-    }
-}
