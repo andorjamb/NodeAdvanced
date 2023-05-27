@@ -1,0 +1,31 @@
+<%- include('head') %>
+    <% if(result.message){ %>
+        <p class="<%= result.type %>">
+            <%= result.message %>
+        </p>
+
+
+
+        <% } else { %>
+
+            <div>
+                <p>
+                    <% result.id %>
+                </p>
+                <p>
+                    <%= result.name %>
+                </p>
+                <p>
+                    <%= result.type %>
+                </p>
+                <p>
+                    <%= result.processor %>
+                </p>
+                <p>
+                    <%= result.amount %>
+                </p>
+            </div>
+
+            <% } %>
+
+                <%- include('tail') %>
